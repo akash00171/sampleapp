@@ -3,12 +3,10 @@ import './App.css'
 
 function App() {
 
-  const apiURL = import.meta.env.VITE_API_URL
-
   const [data, setData] = useState([])
 
   const fetchData = async () => {
-    const res = await fetch(apiURL)
+    const res = await fetch('https://fakestoreapi.com/products')
     const result = await res.json()
 
     console.log(result)
